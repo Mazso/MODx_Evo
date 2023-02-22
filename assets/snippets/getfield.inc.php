@@ -7,7 +7,7 @@
 Returns any document field or template variable from any document or any of its parents.
 
 Author: Grzegorz Adamiak [grad]
-Version: 1.3 beta @2006-11-08 14:40:04
+Version: 1.3.1 beta @2006-11-08 14:40:04
 License: LGPL
 MODx: 0.9.2.1+
 
@@ -22,6 +22,11 @@ unset($docid, $field, $parent, $parentLevel, $topid);
 
 # gfGetFieldContent
 # Returns the inherited value of any content field
+
+# Fix Error: Use of undefined constant
+define('gfGetFieldContent','');
+define('gfGetParentId','');
+
 if (!function_exists(gfGetFieldContent))
 {
 	function gfGetFieldContent($modx,$gfIntDocId,$gfStrDocField)
